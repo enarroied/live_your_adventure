@@ -1,0 +1,314 @@
+title: "The Forest of Mysteries"
+start_scene: forest_entrance
+
+ascii_art:
+  forest:
+    - "     /\\                     /\\"
+    - "    /  \\                   /  \\"
+    - "   /    \\                 /    \\"
+    - "  /      \\_______________/      \\"
+    - " /       /               \\       \\"
+    - "/       /                 \\       \\"
+    - "\\      /                   \\      /"
+    - " \\____/                     \\____/"
+  dragon:
+    - "            /\\                    /\\"
+    - "           /  \\                  /  \\"
+    - "          /    \\                /    \\"
+    - "         /      \\______________/      \\"
+    - "        /       /              \\       \\"
+    - "       /       /                \\       \\"
+    - "       \\      /                  \\      /"
+    - "        \\____/                    \\____/"
+  wizard:
+    - "           ____"
+    - "          |    |"
+    - "          |    |"
+    - "         /      \\"
+    - "        |  .  .  |"
+    - "        |   \\/   |"
+    - "         \\______/"
+    - "          |    |"
+    - "         /|    |\\"
+    - "        / |    | \\"
+    - "       /  |____|  \\"
+    - "      /   /    \\   \\"
+    - "     /   /      \\   \\"
+    - "    /   /        \\   \\"
+    - "   /   /          \\   \\"
+    - "  /___/            \\___\\"
+  elf_village:
+    - "       /\\       /\\       /\\"
+    - "      /  \\     /  \\     /  \\"
+    - "     /____\\   /____\\   /____\\"
+    - "    |      | |      | |      |"
+    - "    |  ^^  | |  ^^  | |  ^^  |"
+    - "    |______| |______| |______|"
+    - "      ||       ||       ||"
+    - "      ||       ||       ||"
+  merchant:
+    - "         _______________"
+    - "        /               \\"
+    - "       /  ___________   \\"
+    - "      /  /           \\   \\"
+    - "     /  /             \\   \\"
+    - "    /  /               \\   \\"
+    - "   /  /                 \\   \\"
+    - "  /  /                   \\   \\"
+    - " /  /                     \\   \\"
+    - "/__/_______________________\\___\\"
+    - "   |                     |"
+    - "   |      MERCHANT       |"
+    - "   |_____________________|"
+  cave:
+    - "          /\\"
+    - "         /  \\"
+    - "        /    \\"
+    - "       /      \\"
+    - "      /        \\"
+    - "     /          \\"
+    - "    /            \\"
+    - "   /              \\"
+    - "  /                \\"
+    - " /__________________\\"
+    - "|____________________|"
+  treasure:
+    - "         __________"
+    - "        /\\____;;___\\"
+    - "       | /         /"
+    - "       `. ())oo() ."
+    - "        |\\(%()*^^()^\\"
+    - "       %| |-%-------|"
+    - "      % \\ | %  ))   |"
+    - "      %  \\|%________|"
+    - "       %%%%"
+
+scenes:
+  forest_entrance:
+    text:
+      - "You wake up in a mysterious forest."
+      - "You have no memory of how you got here."
+      - "You must find your way..."
+    art: forest
+    choices:
+      - text: "Take the glowing path to the left"
+        next: glowing_path
+      - text: "Enter the misty path to the right"
+        next: misty_path
+      - text: "Search for another way around"
+        next: search_around
+
+  glowing_path:
+    text:
+      - "You follow the glowing path..."
+      - "Fireflies surround you, forming a trail of light."
+      - "Soon you discover a peaceful village of elves."
+    art: elf_village
+    choices:
+      - text: "Approach the elves and ask for help"
+        next: elves_village
+      - text: "Rest by the stream and observe"
+        next: stream_rest
+      - text: "Continue following the lights deeper"
+        next: deep_forest
+
+  misty_path:
+    text:
+      - "You venture into the thick mist..."
+      - "Shadows move in the fog. You hear whispers."
+      - "A mysterious figure appears before you."
+    art: wizard
+    choices:
+      - text: "Call out to the figure"
+        next: mysterious_figure
+      - text: "Hide and watch"
+        next: hide_and_watch
+      - text: "Run back to the entrance"
+        next: forest_entrance
+
+  search_around:
+    text:
+      - "You explore the forest edge..."
+      - "You find an old merchant cart with strange wares."
+    art: merchant
+    choices:
+      - text: "Talk to the merchant"
+        next: merchant
+      - text: "Steal an item and run"
+        next: steal_fail
+      - text: "Ignore it and return to paths"
+        next: forest_entrance
+
+  elves_village:
+    text:
+      - "The elves welcome you warmly."
+      - "They offer you a magical artifact to help in your quest."
+    choices:
+      - text: "Accept the gift and continue your adventure"
+        next: accept_gift
+      - text: "Ask about the forest's mystery"
+        next: ask_elves
+      - text: "Stay and learn their magic"
+        next: stay_elves
+
+  stream_rest:
+    text:
+      - "You rest by the stream..."
+      - "A water spirit appears and grants you a wish."
+      - "YOU WIN! Your wish comes true!"
+    choices: []
+
+  deep_forest:
+    text: "The lights lead you to a dragon's cave!"
+    art: cave
+    choices:
+      - text: "Fight the dragon"
+        next: fight_dragon
+      - text: "Answer its riddle"
+        next: dragon_riddle
+      - text: "Try to sneak past"
+        next: sneak_dragon
+
+  fight_dragon:
+    text:
+      - "You fight bravely but the dragon is too powerful."
+      - "GAME OVER - You were defeated."
+    choices: []
+
+  dragon_riddle:
+    text:
+      - "You answer correctly! The dragon respects your wisdom."
+      - "YOU WIN! The dragon grants you its treasure!"
+    art: treasure
+    choices: []
+
+  sneak_dragon:
+    text:
+      - "You sneak past but trip on a rock."
+      - "The dragon wakes up... GAME OVER!"
+    choices: []
+
+  mysterious_figure:
+    text:
+      - "You call out. The figure reveals itself as a wizard!"
+      - "He offers to teach you powerful magic."
+    choices:
+      - text: "Accept his training"
+        next: wizard_training
+      - text: "Ask about the forest"
+        next: wizard_portal
+      - text: "Decline and continue alone"
+        next: lost_fog
+
+  wizard_training:
+    text:
+      - "You become a powerful wizard!"
+      - "YOU WIN! Your adventure continues as a mage!"
+    choices: []
+
+  wizard_portal:
+    text:
+      - "The wizard reveals a hidden portal."
+      - "YOU WIN! You escape to another realm!"
+    choices: []
+
+  lost_fog:
+    text:
+      - "You continue alone and get lost in the fog..."
+      - "GAME OVER - Lost forever in the mist."
+    choices: []
+
+  hide_and_watch:
+    text:
+      - "You hide and watch..."
+      - "The figure is a thief fleeing from guards!"
+      - "The thief notices you and offers to share loot."
+    choices:
+      - text: "Join the thief"
+        next: join_thief
+      - text: "Alert the guards"
+        next: alert_guards
+      - text: "Run away"
+        next: run_away
+
+  join_thief:
+    text:
+      - "You become a legendary thief!"
+      - "YOU WIN! Riches and adventure await!"
+    choices: []
+
+  alert_guards:
+    text:
+      - "The guards reward you with a royal mission!"
+      - "YOU WIN! A new adventure begins!"
+    choices: []
+
+  run_away:
+    text:
+      - "You run blindly into the fog..."
+      - "GAME OVER - You got lost."
+    choices: []
+
+  merchant:
+    text:
+      - "The old merchant greets you."
+      - "'Traveler! Would you like to buy something?'"
+    choices:
+      - text: "Buy a map (costs all your gold)"
+        next: buy_map
+      - text: "Trade a secret for information"
+        next: trade_secret
+      - text: "Just ask for directions"
+        next: get_directions
+
+  buy_map:
+    text:
+      - "The map leads you to a hidden treasure!"
+      - "YOU WIN! You found the lost gold!"
+    art: treasure
+    choices: []
+
+  trade_secret:
+    text:
+      - "The merchant reveals the forest's secret passage!"
+      - "YOU WIN! You found the secret exit!"
+    choices: []
+
+  get_directions:
+    text:
+      - "The merchant points you to the village."
+      - "YOU WIN! You find safety and new friends!"
+    choices: []
+
+  steal_fail:
+    text:
+      - "You grab a glowing gem and run!"
+      - "The merchant curses you. You stumble into a trap."
+      - "GAME OVER - Greed led to your downfall."
+    choices: []
+
+  accept_gift:
+    text:
+      - "With the elf's blessing, you continue..."
+      - "You find the legendary Crystal of Truth!"
+    art: treasure
+    choices:
+      - text: "Continue"
+        next: win_elves
+
+  ask_elves:
+    text:
+      - "The elves tell you of a great treasure deep within."
+      - "You venture forth and find ancient ruins."
+      - "YOU WIN! You discovered the Forest's Secret!"
+    choices: []
+
+  stay_elves:
+    text:
+      - "You stay and become a guardian of the forest."
+      - "YOU WIN! A new chapter begins."
+    choices: []
+
+  win_elves:
+    text: "YOU WIN! You solved the forest's mystery!"
+    choices: []
