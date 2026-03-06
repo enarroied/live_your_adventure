@@ -1,3 +1,4 @@
+import os
 import sys
 import time
 import yaml
@@ -12,10 +13,10 @@ def print_slow(text, delay=0.03):
     print()
 
 
-def print_art(art, delay=0.01):
-    """Print ASCII art line by line with typewriter effect."""
+def print_art(art):
+    """Print ASCII art immediately without delay."""
     for line in art:
-        print_slow(line, delay)
+        print(line)
 
 
 def print_choice(options):
@@ -42,8 +43,17 @@ def load_story(yaml_path):
         return yaml.safe_load(f)
 
 
-def get_art(story_data, art_key):
-    """Retrieve ASCII art from story data by key."""
+def get_art(story_data, art_key, story_path=None):
+    """Retrieve ASCII art from file or story data by key."""
+    if art_key and story_path:
+        art_file = f"ascii_art/{art_key}.txt"
+        story_dir = os.path.dirname(os.path.abspath(story_path))
+        root_dir = os.path.dirname(story_dir)
+        full_path = os.path.join(root_dir, art_file)
+        if os.path.exists(full_path):
+            with open(full_path, "r") as f:
+                return [line.rstrip("\n") for line in f]
+
     ascii_art = story_data.get("ascii_art", {})
     if art_key and art_key in ascii_art:
         art = ascii_art[art_key]
@@ -54,7 +64,7 @@ def get_art(story_data, art_key):
     return None
 
 
-def run_scene(scene_id, story_data):
+def run_scene(scene_id, story_data, story_path):
     """Execute a scene: display art, text, choices, and return next scene ID."""
     scenes = story_data.get("scenes", {})
     scene = scenes.get(scene_id)
@@ -67,7 +77,7 @@ def run_scene(scene_id, story_data):
 
     art_key = scene.get("art")
     if art_key:
-        art = get_art(story_data, art_key)
+        art = get_art(story_data, art_key, story_path)
         if art:
             print_art(art)
 
@@ -103,6 +113,6 @@ def play(story_path):
     current_scene = story.get("start_scene")
 
     while current_scene:
-        current_scene = run_scene(current_scene, story)
+        current_scene = run_scene(current_scene, story, story_path)
 
     print_slow("\nTHE END")
