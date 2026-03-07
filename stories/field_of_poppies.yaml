@@ -574,6 +574,7 @@ scenes:
     text:
       - "You turn to leave..."
       - "'Hey! Don't ignore ME!' Rocky chases after you!"
+    art: rocky
     choices:
       - text: "Turn back"
         next: find_rocky
@@ -1006,6 +1007,7 @@ scenes:
       - "You hide in the poppies..."
       - "The wolves pass, but a tiny dog finds you!"
       - "'Found you! Now you're my prisoner!'"
+    art: wolf
     choices:
       - text: "Escape!"
         next: run_away_again
@@ -1019,6 +1021,7 @@ scenes:
       - "'You... you think that's IT?!'"
       - "Rocky's eyes go wide with hope!"
       - "'You'd really just... play with me? For me?'"
+    art: rocky
     choices:
       - text: "Of course, Rocky!"
         next: play_rocky
@@ -1046,6 +1049,7 @@ scenes:
       - "'Rocky? Oh, he's just a little guy!' the fairy giggles."
       - "'He pretends to be scary, but he's really sweet!'"
       - "'I'll take you to him!'"
+    art: fairy
     choices:
       - text: "Thank you!"
         next: heart_of_field
@@ -1059,6 +1063,7 @@ scenes:
       - "The fairy's eyes flash!"
       - "'Demand? How rude!'"
       - "She zips away... but leaves a trail of golden sparkles!"
+    art: fairy
     choices:
       - text: "Follow the sparkles"
         next: heart_of_field
@@ -1114,6 +1119,7 @@ scenes:
       - "'Rocky? Oh, he's my best friend!' the wolf grins."
       - "'We play together every day!'"
       - "'Want to meet him? He's shy but awesome!'"
+    art: wolf
     choices:
       - text: "Yes please!"
         next: find_rocky
