@@ -50,9 +50,9 @@ scenes:
     art: unicorn
     choices:
       - text: "Approach the unicorn gently"
-        next: unicorn_friend
+        next: unicorn_cautious
       - text: "Try to ride the unicorn"
-        next: unicorn_ride
+        next: unicorn_rocky
       - text: "Leave quietly and find another way"
         next: deeper_field
 
@@ -69,6 +69,72 @@ scenes:
       - text: "Demand the fairy take you there"
         next: demand_fairy
 
+  golden_butterfly:
+    text:
+      - "You search for the Golden Butterfly..."
+      - "You spot golden wings fluttering near the heart of the field!"
+      - "The butterfly leads you to a hidden clearing!"
+    art: butterfly
+    choices:
+      - text: "Follow the butterfly"
+        next: heart_of_field
+      - text: "Ask for directions"
+        next: golden_butterfly_guide
+      - text: "Catch the butterfly"
+        next: catch_fairy
+
+  golden_butterfly_guide:
+    text:
+      - "'Follow the purple path!' the butterfly seems to say."
+      - "It flies toward the center of the field."
+    art: butterfly
+    choices:
+      - text: "Follow it"
+        next: purple_path
+      - text: "Find your own way"
+        next: deeper_field
+
+  ask_about_rocky:
+    text:
+      - "'Rocky? Oh, he's a tiny dog with a big heart!'"
+      - "'He acts like a bully, but he's just lonely.'"
+      - "'Find him at the heart of the field!'"
+    art: fairy
+    choices:
+      - text: "Thank the fairy"
+        next: golden_butterfly
+      - text: "Go to the heart"
+        next: heart_of_field
+      - text: "Ask for a gift"
+        next: fairy_gift
+
+  fairy_gift:
+    text:
+      - "The fairy hands you a glowing petal!"
+      - "'This will help Rocky trust you!'"
+    art: fairy_2
+    choices:
+      - text: "Go find Rocky"
+        next: heart_of_field
+      - text: "Explore more first"
+        next: deeper_field
+      - text: "Ask for more help"
+        next: fairy_help
+
+  demand_fairy:
+    text:
+      - "'How DARE you demand anything of me!'"
+      - "The fairy glares and zips away!"
+      - "You're left alone in the field..."
+    art: fairy
+    choices:
+      - text: "Apologize and call her back"
+        next: fairy_help
+      - text: "Find your own way"
+        next: deeper_field
+      - text: "Go toward the heart alone"
+        next: heart_of_field
+
   catch_fairy:
     text:
       - "You lunge, but the fairy zips away laughing!"
@@ -82,6 +148,20 @@ scenes:
         next: face_wolf
       - text: "Offer the wolf a treat"
         next: wolf_tame
+
+  run_from_wolf:
+    text:
+      - "You bolt through the poppies!"
+      - "The wolf chases you but gets stuck in the stalks!"
+      - "You escape but end up lost..."
+    art: wolf
+    choices:
+      - text: "Keep running"
+        next: escape_chaos
+      - text: "Hide and rest"
+        next: play_dead
+      - text: "Look for help"
+        next: find_path
 
   ignore_fairy:
     text:
@@ -153,6 +233,20 @@ scenes:
       - text: "Go your own way"
         next: deeper_field
 
+  wolf_guide:
+    text:
+      - "'Rocky? He's just ahead!' the wolf growls happily."
+      - "'But approach carefully - he's shy!'"
+      - "The wolf leads you to a small clearing..."
+    art: wolf
+    choices:
+      - text: "Approach slowly"
+        next: cautious_approach
+      - text: "Call out to Rocky"
+        next: find_rocky
+      - text: "Wait and watch"
+        next: spy_rocky
+
   face_wolf:
     text:
       - "You stand tall and face the wolf!"
@@ -206,8 +300,8 @@ scenes:
         next: find_rocky
       - text: "Prepare for trouble"
         next: confront_rocky
-      - text: "Hide behind the owl"
-        next: hide_owl
+      - text: "Ask the owl for protection"
+        next: owl_protect
 
   climb_poppy:
     text:
@@ -236,6 +330,20 @@ scenes:
         next: befriend_rocky
       - text: "Run while they're distracted"
         next: escape_chaos
+
+  heart_of_field:
+    text:
+      - "You reach the heart of the poppy field!"
+      - "The flowers glow with intense crimson light."
+      - "A small but fierce dog stands guard over a pile of toys!"
+    art: rocky_snacks
+    choices:
+      - text: "Say hello"
+        next: find_rocky
+      - text: "Offer a treat"
+        next: treat_rocky
+      - text: "Ask about his toys"
+        next: compliment_rocky
 
   play_dead:
     text:
@@ -349,6 +457,20 @@ scenes:
       - text: "Continue on without meeting"
         next: find_path
 
+  unicorn_gift:
+    text:
+      - "The unicorn bows its head and produces a golden flower!"
+      - "'Give this to Rocky. He'll understand.'"
+      - "You take the precious gift gratefully."
+    art: magic
+    choices:
+      - text: "Go meet Rocky"
+        next: heart_of_field
+      - text: "Ask for more advice"
+        next: unicorn_rocky
+      - text: "Thank the unicorn and explore"
+        next: deeper_field
+
   observe_rocky:
     text:
       - "You watch from behind a poppy..."
@@ -445,6 +567,20 @@ scenes:
         next: confront_rocky
       - text: "I just want to go home"
         next: help_rocky
+
+  play_rocky:
+    text:
+      - "You and Rocky start playing!"
+      - "He fetches sticks, does zoomies, and laughs!"
+      - "'This is the BEST day ever!' Rocky barks happily!"
+    art: dog_play
+    choices:
+      - text: "Keep playing!"
+        next: explore_together
+      - text: "Take a break"
+        next: comfort_rocky
+      - text: "Ask to go home"
+        next: rocky_helps
 
   befriend_rocky:
     text:
@@ -918,3 +1054,105 @@ scenes:
         next: rocky_happy
       - text: "Let's play!"
         next: explore_together
+
+  owl_protect:
+    text:
+      - "You hide behind the owl!"
+      - "The owl hoots and spreads its wings protectively."
+      - "The small dog pauses, confused by the creature."
+    art: owl
+    choices:
+      - text: "Say hello while protected"
+        next: find_rocky
+      - text: "Ask the owl to introduce you"
+        next: owl_intro
+      - text: "Make a run for it"
+        next: run_away_again
+
+  owl_intro:
+    text:
+      - "The owl hoots softly to the little dog."
+      - "'This human is friendly,' it seems to say."
+      - "The dog's expression softens slightly."
+    art: owl_2
+    choices:
+      - text: "Offer a smile"
+        next: find_rocky
+      - text: "Offer a treat"
+        next: treat_rocky
+      - text: "Ask for help"
+        next: help_rocky
+
+  wolf_rocky_info:
+    text:
+      - "'Rocky? That little guy!' the wolf grins."
+      - "'He's my best buddy! A bit grumpy, but loyal.'"
+      - "'Want me to take you to him?'"
+    art: wolf
+    choices:
+      - text: "Yes, please!"
+        next: find_rocky
+      - text: "Tell me more about him"
+        next: wolf_weakness
+      - text: "I'll find my own way"
+        next: find_path
+
+  golden_petals:
+    text:
+      - "You search for golden petals..."
+      - "You find a patch that glows brighter than the rest!"
+      - "But an imp appears, blocking your path!"
+    art: imp
+    choices:
+      - text: "Trade with the imp"
+        next: imp_deal
+      - text: "Run past the imp"
+        next: heart_of_field
+      - text: "Use the petals as a distraction"
+        next: escape_chaos
+
+  hidden_glade:
+    text:
+      - "You find a hidden glade in the field!"
+      - "Toys and treasures are scattered everywhere!"
+      - "A small, grumpy-looking dog guards it all!"
+    art: glade
+    choices:
+      - text: "Introduce yourself"
+        next: hidden_glade_meet
+      - text: "Offer a treat"
+        next: treat_rocky
+      - text: "Ask to join"
+        next: join_rocky
+
+  adventure_continue:
+    text:
+      - "You and Rocky continue your magical adventure!"
+      - "New wonders await in the field every day!"
+      - "YOU WIN! Your adventure has just begun!"
+    art: friends
+    choices: []
+
+  say_goodbye:
+    text:
+      - "'Goodbye, friend!' Rocky waves his tiny paw."
+      - "You make your way to the edge of the field."
+      - "YOU WIN! You found your way home with a new friend!"
+    art: home
+    choices: []
+
+  see_again:
+    text:
+      - "'Of course you'll see me again!' Rocky smiles."
+      - "'This is your home now too!'"
+      - "YOU WIN! You've found a forever friend!"
+    art: friends
+    choices: []
+
+  best_friends:
+    text:
+      - "You and Rocky embrace happily!"
+      - "'Best friends forever!' you both shout!"
+      - "YOU WIN! The End!"
+    art: heart
+    choices: []

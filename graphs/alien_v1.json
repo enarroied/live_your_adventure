@@ -1,0 +1,28 @@
+{
+    "graph_id": "alien_v1",
+    "start_node": "A",
+
+    "nodes": {
+        "A":  { "type": "scene" },
+
+        "AA": { "type": "scene" },
+        "AB": { "type": "scene" },
+
+        "BA": { "type": "scene" },
+        "BB": { "type": "scene" },
+
+        "WIN_ENDING":         { "type": "ending" },
+        "EATEN_ENDING":       { "type": "ending" },
+        "ALTERNATIVE_ENDING": { "type": "ending" }
+    },
+
+    "edges": {
+        "A":  ["AA", "AB"],
+
+        "AA": ["BA", "BB"],
+        "AB": ["EATEN_ENDING"],
+
+        "BA": ["WIN_ENDING"],
+        "BB": ["ALTERNATIVE_ENDING"]
+    }
+}

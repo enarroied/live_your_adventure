@@ -1,0 +1,66 @@
+{
+    "graph_id": "alien_v1",
+    "nodes": {
+
+        "A": {
+            "title": "The Night Sky Opens",
+            "description": "It's 2:17 AM. You're driving home on an empty highway when every radio station cuts to static.\nThen the sky cracks open.\nA light — not a beam, not a flash, something *thicker* than light — drops from above and pins your car to the asphalt.\nYour door opens by itself. Your feet move without asking your brain.\nThe last thing you see before the light swallows you is the highway, the trees, and a world that has no idea what is about to happen to it.",
+            "image_url": "images/alliens/allien1.png"
+        },
+
+        "AA": {
+            "title": "Two Very Good Reasons to Cooperate",
+            "description": "You wake up on a metal floor that hums. The air smells like ozone and something floral you can't name.\nThen you see them.\nTwo aliens — tall, luminous, carrying weapons that make your entire concept of firearms feel quaint — are standing over you.\nThey are, against all reasonable expectation, absolutely stunning.\nOne gestures down a corridor with her gun. The other watches you with the focused patience of someone who has done this before and is *mildly* hoping you'll make it interesting.\nThey want you to follow.\nOutside the viewport, the stars are moving fast. There is a war out there — entire fleets exchanging fire across the dark, moons used as cover, shockwaves rippling through the void like stones through water.\nYou are very small. They are very capable. The corridor awaits.",
+            "image_url": "images/alliens/alliens_guns.png"
+        },
+
+        "AB": {
+            "title": "The Last Bad Decision",
+            "description": "You decide you didn't survive this long on Earth to take orders from strangers — however otherworldly.\nYou back away. You find a different corridor. You feel pretty good about your instincts for about thirty seconds.\nThen you hear it — a sound like a building deciding to breathe.\nIt comes from the dark ahead of you.\nIt is very large. It is very hungry. It has not eaten today.\nToday is about to change.",
+            "image_url": "images/alliens/looses.png"
+        },
+
+        "BA": {
+            "title": "Three Against the Dark",
+            "description": "The monster fills the corridor — wall to wall, floor to ceiling — a mass of limbs and hunger and noise that shouldn't exist.\nBut you are not alone.\nThe two aliens move like they've trained for exactly this moment. One draws fire from the left. The other flanks right. You do something between crouching and helping and somehow, improbably, that is enough.\nThe fight is ugly. It is loud. It goes on longer than it should.\nBut when the silence finally comes, you're still standing.\nSo are they.\nOne of them looks at you — really looks at you — and says something in a language you don't know. The other translates, more or less:\n*'You are surprisingly useful for a ground creature.'*",
+            "image_url": "images/alliens/alliens_guns_monster.png"
+        },
+
+        "BB": {
+            "title": "The Capsule Bay",
+            "description": "They lead you away from the war deck — past viewports strobing with weapons fire — down into a sublevel you weren't supposed to see.\nRow after row of escape capsules, glowing amber. Charged. Ready.\nOne of the aliens presses her hand to the nearest door. It opens with a hiss.\nShe looks at you. Then at the capsule. Then back at you.\nSomewhere far above, something enormous just hit the hull.\nYou have about thirty seconds to decide.",
+            "image_url": "images/alliens/alternative.png"
+        },
+
+        "WIN_ENDING": {
+            "title": "Mankind Saved. You're Welcome.",
+            "description": "The monster is dead. The war, it turns out, hinged on this single corridor, this single creature — a living weapon that was holding the alien fleet together by fear alone. With it gone, the formation collapses. The fleet retreats.\nEarth is safe.\nYou get a ride home in a ship that breaks every law of physics you were taught. Your car is still on the highway, engine running, radio playing a song you half-remember.\nYou sit in the driver's seat for a long time before putting it in gear.\nMankind will never know. But you do.\n\n✦  MANKIND SAVED  ✦",
+            "image_url": "images/alliens/success.png"
+        },
+
+        "EATEN_ENDING": {
+            "title": "You Were Delicious",
+            "description": "The monster is not, it turns out, interested in negotiation.\nThe aliens find what's left of you later. One of them shakes her head slowly. The other makes a small, precise mark in a ledger.\nThe universe continues without you — as it was always going to — indifferent, vast, and faintly disappointed.\n\n✧  GAME OVER  ✧",
+            "image_url": "images/alliens/looses.png"
+        },
+
+        "ALTERNATIVE_ENDING": {
+            "title": "A New Galaxy. A New Life.",
+            "description": "The capsule launches. You clear the ship in seconds, punching through the battle into open space.\nThen you watch it happen — in complete silence, because space is silence.\nFirst the ship. Then the fleet. Then the stations, the planets, the systems. In a cascade that takes four long minutes, the entire galaxy folds in on itself like paper in an invisible fist.\nEvery person. Every city. Every terrible morning and every beautiful one.\nGone.\nThe alien sitting across from you reaches over and takes your hand. She doesn't say anything. There is nothing to say.\nThe capsule drops out of jump-speed into a sky full of stars you have never seen. A new galaxy — unnamed, uncatalogued, entirely yours.\nThe other alien is already arguing with the navigation system. The first one catches you staring out the viewport and raises an eyebrow.\nYou smile. She smiles back.\nBehind you, an entire universe is gone. Ahead of you, everything else.\n\n✦  A NEW BEGINNING  ✦\n*(The old world did not make it. But you did. Make it count.)*",
+            "image_url": "images/alliens/alternative.png"
+        }
+
+    },
+    "choices": {
+        "A,AA":  "Follow them — they have guns and you don't",
+        "A,AB":  "Back away and find your own way out",
+
+        "AA,BA": "Stand your ground and fight the monster together",
+        "AA,BB": "Slip away toward the capsule bay",
+
+        "AB,EATEN_ENDING": "Step forward into the dark",
+
+        "BA,WIN_ENDING":          "Finish it — for Earth",
+        "BB,ALTERNATIVE_ENDING":  "Get in the capsule and launch"
+    }
+}

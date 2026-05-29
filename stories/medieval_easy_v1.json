@@ -1,0 +1,55 @@
+{
+    "graph_id": "easy_v1",
+    "nodes": {
+        "A": {
+            "title": "The Gates of Ironveil",
+            "description": "You are Sir Aldric, a wandering knight, arriving at the walled town of Ironveil as dusk bleeds red across the sky.\nThe town crier shouts that Lord Malachar's forces will reach the valley by dawn. The townsfolk are terrified.\nThree paths lie before you.",
+            "image_url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f38bd36f-bfc7-4fbf-931e-93a12b13a823/dgu1hgn-1612ef2f-df71-4043-8c29-c6797d2271f4.jpg/v1/fill/w_1031,h_775,q_70,strp/parthenay___river_and_gate_2_by_ericnarro_dgu1hgn-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYyIiwicGF0aCI6Ii9mL2YzOGJkMzZmLWJmYzctNGZiZi05MzFlLTkzYTEyYjEzYTgyMy9kZ3UxaGduLTE2MTJlZjJmLWRmNzEtNDA0My04YzI5LWM2Nzk3ZDIyNzFmNC5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.aoNhPlarYihWPWSnJCHTHSMja71JyfK7ThF_Pa4AqO0"
+        },
+        "AA": {
+            "title": "The Whispering Forest",
+            "description": "You plunge into the ancient forest north of town, following rumours of a hermit sage who once served the old king.\nOwls watch you from gnarled branches. Foxfire flickers between the roots.\nDeep in the woods, you find the sage's hut — and a glowing runestone on his table.",
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Forest_path_phu_soi_dao.jpg/640px-Forest_path_phu_soi_dao.jpg"
+        },
+        "AB": {
+            "title": "The Undercroft",
+            "description": "You descend into the town's forgotten undercroft, where smugglers once hid contraband beneath the market square.\nDamp stone, the smell of old wine, the skitter of rats.\nAt the far end, a rusted iron door stands ajar — behind it, the distant clank of armour. Malachar's scouts are already inside the walls."
+        },
+        "AC": {
+            "title": "The Battlements",
+            "description": "You climb the crumbling battlements above the south gate, where a handful of frightened militia are holding torches against the dark.\nFrom here you can see Malachar's campfires stretching across the valley — a hundred flames, maybe more.\nAn old ballista sits unmaintained at the tower's edge, its mechanism corroded but perhaps still functional."
+        },
+        "B1": {
+            "title": "The Sage's Bargain",
+            "description": "The sage, hollow-eyed and ancient, explains: the runestone is a Ward of Binding, last used three centuries ago.\nIf placed at the valley's mouth before dawn, it will seal the pass for a generation.\nYou ride hard through the night. The stone grows warm in your hands. By the first grey light you press it into the earth — and the ground trembles, the pass buckles, great stones tumbling to block the way.\nMalachar's horns sound in fury, far off, too late."
+        },
+        "B2": {
+            "title": "Outnumbered in the Dark",
+            "description": "The scouts hear you. Torchlight floods the undercroft.\nYou draw your sword but there are six of them, veterans with crossbows already raised.\nThey take you prisoner and march you before Malachar himself, who arrives at dawn with his full host.\nIronveil falls. The townsfolk are scattered. Your sword is melted down for horseshoes."
+        },
+        "B3": {
+            "title": "The Shot Heard at Dawn",
+            "description": "You spend the night with oil, rags, and a hammer — coaxing the old ballista back to life.\nThe militia gather round, wide-eyed, learning to crank and aim.\nAt first light, Malachar's vanguard charges the gate. Your first bolt takes out the battering ram. Your second scatters the cavalry.\nThe third never needs to fly. A trumpet sounds retreat. The valley is silent.\nThe townsfolk name you Warden of Ironveil, and for once, you stay."
+        },
+        "GOOD_ENDING": {
+            "title": "Ironveil Stands",
+            "description": "The sun rises over a free town. Smoke curls from morning hearths, not burning thatch.\nChildren run in the square again. The militia raise a rough-carved wooden statue in your likeness by the gate — it's nothing like you, but you don't mind.\nTales of Ironveil's deliverance will be told in taverns for a hundred years.\n\n✦  YOU HAVE TRIUMPHED  ✦",
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sooneck_-_panoramio.jpg/640px-Sooneck_-_panoramio.jpg"
+        },
+        "BAD_ENDING": {
+            "title": "The Fall of Ironveil",
+            "description": "Malachar's banner flies from the keep. The market stalls are ash. The bell tower is silent.\nYou sit in chains in a cold cell beneath the castle, listening to the distant weeping of the townsfolk.\nPerhaps someone else will come. Perhaps not.\n\n✦  YOUR QUEST HAS ENDED  ✦"
+        }
+    },
+    "choices": {
+        "A,AA":   "Ride north into the Whispering Forest",
+        "A,AB":   "Descend into the old undercroft",
+        "A,AC":   "Climb the battlements and take stock",
+        "AA,B1":  "Take the runestone and ride for the pass",
+        "AB,B2":  "Push through the iron door toward the sound",
+        "AC,B3":  "Spend the night repairing the ballista",
+        "B1,GOOD_ENDING": "Place the Ward of Binding at the valley's mouth",
+        "B2,BAD_ENDING":  "Accept capture — you are outnumbered",
+        "B3,GOOD_ENDING": "Hold the gate at dawn with your militia"
+    }
+}

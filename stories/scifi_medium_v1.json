@@ -1,0 +1,68 @@
+{
+    "graph_id": "medium_v1",
+    "nodes": {
+        "A": {
+            "title": "The Wreck of the Helios Drift",
+            "description": "Your survey ship drops out of FTL into the wrong sector — dead silent, no beacon, no charted system.\nThrough the viewport: a massive derelict vessel, dark and drifting, hull scorched by something that burned hotter than any weapon you know.\nYour comms are jammed. Your FTL drive needs 40 minutes to spool back up.\nThe derelict's docking bay is open. Something is moving on the long-range thermal scan.\nThree options flicker on your HUD."
+        },
+        "AA": {
+            "title": "Breach the Command Deck",
+            "description": "You EVA across the void and force your way into the derelict's command deck through a shattered airlock.\nZero-g. Emergency lighting in pulsing red. Consoles gutted — not by explosion but methodically *removed*, as though something needed the components.\nOn the captain's chair, still strapped in: a skeleton in a pressure suit, visor cracked, fingers frozen mid-gesture toward something on the far wall.\nScrawled in what you choose not to identify: **DO NOT RESPOND TO THE SIGNAL.**"
+        },
+        "AB": {
+            "title": "Follow the Thermal Signature",
+            "description": "The heat source is moving — slowly, deliberately — toward the aft cargo bay.\nYou match its path through maintenance corridors, mag-boots clicking in the silence.\nYou find it: a sealed cryo-pod, frost still hissing off the seals, status light cycling green.\nSomething is waking up inside. The pod's manifest ID has been scratched off. The biological readout shows two heartbeats."
+        },
+        "AC": {
+            "title": "Access the Engineering Core",
+            "description": "The engineering core is intact — eerie given the rest of the wreck.\nThe reactor is cold but the auxiliary power grid is alive, fed by something you don't recognise attached to the hull.\nOn the main terminal, a single open file: a first-contact protocol, partially executed. Coordinates transmitted. Awaiting response.\n**Response received: 14 minutes ago.**\nSomething answered. And the coordinates in the response header match your current position."
+        },
+        "BA": {
+            "title": "Override the Transmission Array",
+            "description": "The command deck's backup array is still live — barely.\nYou cross the dead captain's frozen warning, find the transmitter, and burn out the entire system with a sustained power surge.\nNo more signal. No more beacon. Whatever was coming, it won't find this wreck by its own call.\nYou EVA back to your ship with six minutes to spare, FTL spooling green.\nThe derelict shrinks in your rear display. You don't look at it long."
+        },
+        "BB": {
+            "title": "Broadcast a Response",
+            "description": "The command deck array can do more than receive — you realise the skeleton's gesture was pointing at the broadcast controls.\nMaybe diplomacy. Maybe the only way out.\nYou compose a response in the derelict's own signal format and transmit.\nThirty seconds later, a ship decloaks off your port bow. It is not human-built. It is enormous.\nA docking clamp locks onto your hull before you can react.\nThey are not hostile. But you are not leaving."
+        },
+        "BC": {
+            "title": "Open the Cryo-Pod",
+            "description": "Two heartbeats. You crack the seals.\nInside: a human woman, mid-thirties, and — wrapped in her arms — something that is almost an infant, if infants had six fingers and eyes that reflect light like a cat's.\nShe wakes gasping. Her first words: *'Don't let them take it back.'*\nBefore you can ask anything, the docking bay depressurises. A second ship has attached to the derelict's hull.\nThey are very fast. They are looking for something specific. They find it."
+        },
+        "BD": {
+            "title": "Disconnect the Unknown Device",
+            "description": "The thing on the hull is feeding power *to* the derelict — and transmitting. A homing pulse, slow and patient, running for what the logs suggest is eleven years.\nYou suit up, go outside, and cut it free with a plasma torch. It drifts away, still pulsing, into the dark.\nThe terminal goes dead. The coordinates in the response header are gone.\nYou have fourteen minutes until FTL. You spend them watching the scanner. Nothing comes.\nNothing you can detect, anyway."
+        },
+        "ESCAPE_ENDING": {
+            "title": "Ghost Jump",
+            "description": "FTL spins up. You punch in the first safe coordinates in the database — a fuel depot two systems over, boring, beautiful, and full of other humans.\nThe derelict vanishes as you jump. No record in your logs of the signal, the coordinates, the response.\nYou filed it under sensor anomaly. You tell yourself that was the right call.\nSome nights you check your own hull for devices you didn't install.\nSo far, nothing.\n\n✦  YOU ESCAPED  ✦"
+        },
+        "SACRIFICE_ENDING": {
+            "title": "First Contact",
+            "description": "Their ship is a city. You are processed — gently, thoroughly — over what feels like weeks.\nThey return you to human space eventually, with no memory of what you told them, and a small scar behind your left ear.\nThe official debrief finds nothing unusual. You are cleared for active duty.\nYou never fly solo again. Not because of regulations.\nBecause you know, now, that you were never really alone out there.\n\n✧  YOUR JOURNEY CONTINUES — SOMEWHERE  ✧"
+        },
+        "TRAPPED_ENDING": {
+            "title": "Claimed",
+            "description": "They are not cruel. They seem, in fact, fascinated.\nThe woman and the child are taken somewhere else. You are kept separate, studied with instruments that don't touch you, fed, kept warm.\nYour ship is still in the docking bay. Untouched. The FTL drive long since spooled down.\nYou spend a lot of time wondering what the captain's note meant.\nYou understand it now. You just can't warn anyone.\n\n✧  YOU ARE THEIR GUEST  ✧"
+        }
+    },
+    "choices": {
+        "A,AA":  "EVA to the command deck",
+        "A,AB":  "Track the thermal signature",
+        "A,AC":  "Investigate the engineering core",
+
+        "AA,BA": "Use the array to kill the signal",
+        "AA,BB": "Use the array to broadcast a response",
+
+        "AB,BB": "Stand back and let the pod finish opening",
+        "AB,BC": "Manually crack the cryo-pod seals",
+
+        "AC,BC": "Trace where the response came from",
+        "AC,BD": "Suit up and cut the device off the hull",
+
+        "BA,ESCAPE_ENDING":    "Get back to your ship and jump",
+        "BB,SACRIFICE_ENDING": "Stay calm and let them dock",
+        "BC,TRAPPED_ENDING":   "Cooperate — you have no other options",
+        "BD,ESCAPE_ENDING":    "Return to your ship and spool FTL"
+    }
+}

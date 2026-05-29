@@ -1,0 +1,27 @@
+{
+    "graph_id": "easy_v1",
+    "start_node": "A",
+    "nodes": {
+        "A":  { "type": "scene" },
+
+        "AA": { "type": "scene" },
+        "AB": { "type": "scene" },
+        "AC": { "type": "scene" },
+
+        "B1": { "type": "scene" },
+        "B2": { "type": "scene" },
+        "B3": { "type": "scene" },
+
+        "GOOD_ENDING": { "type": "ending" },
+        "BAD_ENDING":  { "type": "ending" }
+    },
+    "edges": {
+        "A":  ["AA", "AB", "AC"],
+        "AA": ["B1"],
+        "AB": ["B2"],
+        "AC": ["B3"],
+        "B1": ["GOOD_ENDING"],
+        "B2": ["BAD_ENDING"],
+        "B3": ["GOOD_ENDING"]
+    }
+}

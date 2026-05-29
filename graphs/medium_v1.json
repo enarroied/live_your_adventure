@@ -1,0 +1,32 @@
+{
+    "graph_id": "medium_v1",
+    "start_node": "A",
+    "nodes": {
+        "A":  { "type": "scene" },
+
+        "AA": { "type": "scene" },
+        "AB": { "type": "scene" },
+        "AC": { "type": "scene" },
+
+        "BA": { "type": "scene" },
+        "BB": { "type": "scene" },
+        "BC": { "type": "scene" },
+        "BD": { "type": "scene" },
+
+        "ESCAPE_ENDING":    { "type": "ending" },
+        "SACRIFICE_ENDING": { "type": "ending" },
+        "TRAPPED_ENDING":   { "type": "ending" }
+    },
+    "edges": {
+        "A":  ["AA", "AB", "AC"],
+
+        "AA": ["BA", "BB"],
+        "AB": ["BB", "BC"],
+        "AC": ["BC", "BD"],
+
+        "BA": ["ESCAPE_ENDING"],
+        "BB": ["SACRIFICE_ENDING"],
+        "BC": ["TRAPPED_ENDING"],
+        "BD": ["ESCAPE_ENDING"]
+    }
+}
