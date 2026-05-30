@@ -17,7 +17,7 @@
         "AB": {
             "title": "The Last Bad Decision",
             "description": "You decide you didn't survive this long on Earth to take orders from strangers — however otherworldly.\nYou back away. You find a different corridor. You feel pretty good about your instincts for about thirty seconds.\nThen you hear it — a sound like a building deciding to breathe.\nIt comes from the dark ahead of you.\nIt is very large. It is very hungry. It has not eaten today.\nToday is about to change.",
-            "image_url": "images/alliens/looses.png"
+            "image_url": "images/alliens/monster.png"
         },
 
         "BA": {
@@ -29,7 +29,7 @@
         "BB": {
             "title": "The Capsule Bay",
             "description": "They lead you away from the war deck — past viewports strobing with weapons fire — down into a sublevel you weren't supposed to see.\nRow after row of escape capsules, glowing amber. Charged. Ready.\nOne of the aliens presses her hand to the nearest door. It opens with a hiss.\nShe looks at you. Then at the capsule. Then back at you.\nSomewhere far above, something enormous just hit the hull.\nYou have about thirty seconds to decide.",
-            "image_url": "images/alliens/alternative.png"
+            "image_url": "images/alliens/escape.png"
         },
 
         "WIN_ENDING": {
